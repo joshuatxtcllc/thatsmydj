@@ -1,0 +1,221 @@
+# 🎵 Hip Hop Legends Beat Maker - Railway Deployment Guide
+
+AI-powered beat maker with sample upload functionality, inspired by legendary hip hop producers.
+
+## 📁 Project Structure
+
+```
+hip-hop-beat-maker/
+├── public/
+│   └── index.html          # Main application file
+├── server.js               # Express server
+├── package.json            # Dependencies
+├── railway.toml            # Railway configuration
+├── .gitignore             # Git ignore rules
+└── README.md              # This file
+```
+
+## 🚀 Quick Start - Railway Deployment
+
+### Step 1: Prepare Your Project
+
+1. **Create project directory:**
+   ```bash
+   mkdir hip-hop-beat-maker
+   cd hip-hop-beat-maker
+   ```
+
+2. **Create the `public` folder:**
+   ```bash
+   mkdir public
+   ```
+
+3. **Copy all files:**
+   - Copy the HTML artifact content → `public/index.html`
+   - Copy `package.json` → root directory
+   - Copy `server.js` → root directory
+   - Copy `railway.toml` → root directory
+   - Copy `.gitignore` → root directory
+
+### Step 2: Initialize Git Repository
+
+```bash
+git init
+git add .
+git commit -m "Initial commit: Hip Hop Legends Beat Maker"
+```
+
+### Step 3: Deploy to Railway
+
+#### Option A: Using Railway CLI (Recommended)
+
+1. **Install Railway CLI:**
+   ```bash
+   npm i -g @railway/cli
+   ```
+
+2. **Login to Railway:**
+   ```bash
+   railway login
+   ```
+
+3. **Initialize and deploy:**
+   ```bash
+   railway init
+   railway up
+   ```
+
+4. **Generate domain:**
+   ```bash
+   railway domain
+   ```
+
+#### Option B: Using Railway Dashboard
+
+1. Go to [railway.app](https://railway.app)
+2. Click **"New Project"**
+3. Select **"Deploy from GitHub repo"**
+4. Connect your GitHub account (if not already)
+5. Push your code to GitHub:
+   ```bash
+   # Create a new repo on GitHub first, then:
+   git remote add origin YOUR_GITHUB_REPO_URL
+   git branch -M main
+   git push -u origin main
+   ```
+6. Select your repository in Railway
+7. Railway will auto-detect and deploy!
+
+### Step 4: Configure Environment (Optional)
+
+If you want to add environment variables:
+
+```bash
+railway variables set NODE_ENV=production
+```
+
+Or through the Railway dashboard:
+- Navigate to your project
+- Go to **Variables** tab
+- Add any needed environment variables
+
+## 🔧 Local Development
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Run development server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Access locally:**
+   ```
+   http://localhost:3000
+   ```
+
+## 🎛️ Features
+
+- ✨ AI-powered beat generation (Claude API)
+- 🎤 Upload and assign custom samples (WAV, MP3, OGG)
+- 🎹 16-step sequencer with 5 tracks
+- 🔄 Loop mode
+- ⚡ Tempo control (60-160 BPM)
+- 🎨 Futuristic neon UI
+- 🎧 Professional audio synthesis
+- 💾 In-memory sample management
+
+## 📊 Producer Styles Included
+
+- Dr. Dre (West Coast G-Funk)
+- J Dilla (Off-beat Soul)
+- Timbaland (Futuristic Syncopation)
+- Kanye West (Soulful Samples)
+- Metro Boomin (Trap 808s)
+- DJ Premier (Boom Bap)
+- Pharrell (Minimal Funk)
+- RZA (Gritty Wu-Tang)
+- 9th Wonder (Smooth Soul)
+
+## 🔒 Security Features
+
+- Helmet.js for security headers
+- Content Security Policy configured
+- Compression enabled
+- HTTPS enforced on Railway
+
+## 📈 Monitoring
+
+Railway provides built-in monitoring:
+- Check `/health` endpoint for health status
+- View logs in Railway dashboard
+- Monitor resource usage
+
+## 🐛 Troubleshooting
+
+### Build Fails
+- Ensure Node version ≥18.0.0
+- Check `package.json` syntax
+- Verify all files are committed
+
+### App Crashes
+- Check Railway logs: `railway logs`
+- Verify PORT environment variable is used correctly
+- Check `/health` endpoint
+
+### Audio Not Working
+- Ensure browser supports Web Audio API
+- Check browser console for errors
+- Verify files are in `public` folder
+
+## 📝 File Checklist
+
+Before deploying, ensure you have:
+
+- [ ] `public/index.html` - Main application
+- [ ] `server.js` - Express server
+- [ ] `package.json` - Dependencies
+- [ ] `railway.toml` - Railway config
+- [ ] `.gitignore` - Git ignore rules
+- [ ] `README.md` - Documentation
+
+## 🌐 Post-Deployment
+
+After successful deployment:
+
+1. **Get your URL** from Railway dashboard
+2. **Test the application:**
+   - Open the URL in your browser
+   - Try generating a beat with a producer name
+   - Upload a sample and assign it to a track
+   - Program a beat and hit play
+
+3. **Custom Domain (Optional):**
+   - Go to Railway project settings
+   - Add your custom domain
+   - Update DNS records as instructed
+
+## 💡 Tips
+
+- **Audio files:** Keep samples under 5MB for best performance
+- **Browser support:** Chrome/Edge recommended for best audio quality
+- **Mobile:** Works on mobile but desktop recommended for production
+- **Samples:** WAV format recommended for highest quality
+
+## 🆘 Support
+
+If you encounter issues:
+1. Check Railway deployment logs
+2. Verify all files are correctly placed
+3. Test locally first with `npm run dev`
+4. Check browser console for client-side errors
+
+## 📜 License
+
+MIT License - Feel free to use and modify!
+
+---
+
+Built with ❤️ for hip hop producers everywhere 🎤🔥
